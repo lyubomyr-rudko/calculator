@@ -13,7 +13,6 @@ require(['bower_components/aura/lib/aura'], function(Aura) {
   }).use('extensions/aura-backbones')
     .use('extensions/aura-templates')
     .use('extensions/utils')
-    .use('extensions/router')
     .start();
 });
 

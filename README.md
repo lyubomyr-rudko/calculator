@@ -1,7 +1,7 @@
 calculator
 =================
 
-Calculator using RequireJs, BackboneJs and some other cool stuff
+Simple Calculator application, implemented using RequireJs, BackboneJs and some other cool stuff
 
 1. npm install
 1. npm install -g bower

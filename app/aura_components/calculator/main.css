@@ -1,3 +1,24 @@
 .calculator {
+	width: 320px;
+	margin: 10px auto;
+}
 
+.calculator .display {
+	font-size: 25px;
+	display: inline-block;
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+
+.calculator div.row {
+	margin-top: 5px;
+}
+
+.calculator a:focus {
+    outline: 0;
+}
+
+.calculator a.btn span {
+	width: 50px;
+	display: inline-block;
 }
