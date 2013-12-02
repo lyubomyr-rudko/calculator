@@ -3,12 +3,16 @@
 	margin: 10px auto;
 }
 
+.calculator .display-cnt {
+	padding: 2px;
+}
+
 .calculator .display {
 	font-size: 25px;
-	display: inline-block;
-	line-height: 20px;
 	margin-bottom: 5px;
+	display: inline;
 	text-align: right;
+	margin-right: 5px;
 }
 
 .calculator .row {

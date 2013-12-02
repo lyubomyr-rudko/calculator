@@ -5,7 +5,6 @@ define([
     function getInstance() {
         var params = [],
             action = null,
-            maxInputDigits = 15,
             actions = {
                 equal: 'equal',
                 ce: 'ce', //clear
@@ -25,9 +24,11 @@ define([
             currentParam = params[params.length - 1];
 
             if (currentParam instanceof Array) {
-                if (currentParam.length <= maxInputDigits) {
-                    currentParam.push(val);
+                if (val === '.' && dotIsEntered(currentParam)) {
+                    return;
                 }
+
+                currentParam.push(val);
             } else {
                 if (val === '.') {
                     val = '0.';
@@ -39,6 +40,10 @@ define([
                     params = [[val]];
                 }
             }
+        }
+
+        function dotIsEntered (arr) {
+            return _.some(arr, function (item) { return '.' === item; })
         }
 
         function addAction (a) {
@@ -87,14 +92,15 @@ define([
 
         function getOutput () {
             var value1,
-                value2;
+                value2,
+                res;
 
             if (params[1]) {
-                value2 = parseFloat(params[1].join(''));
+                value2 = params[1].join('');
             }
 
             if (params[0] instanceof Array) {
-                value1 = parseFloat(params[0].join(''));
+                value1 = params[0].join('');
             } else {
                 value1 = params[0];
             }
