@@ -66,9 +66,8 @@ define([
 
                 display.html(calc.getOutput());
             });
-
-            // $(document).keydown(cb);
         },
+
         animateBtnClick: function (value) {
             this.$el.find('a[data-calculator-button="' + value + '"]').addClass("active").delay(100).queue(function(next){
                 $(this).removeClass("active");
